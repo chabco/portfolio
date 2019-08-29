@@ -48,26 +48,27 @@ body {
     padding: 20px;
 } */
 
+#about,
+#projects,
+#skills,
+#contact {
+    height: 100vh;
+    padding: 200px;
+
+}
+
 #about {
     background-color: rgb(22, 133, 72);
-    height: 1000px;
-    padding: 200px;
 }
 #projects {
     background-color: rgb(66, 66, 193);
-    height: 1000px;
-    padding: 200px;
 }
 #skills {
     background-color: rgb(21, 211, 138);
-    height: 1000px;
-    padding: 200px;
 }
 
 #contact {
     background-color: rgb(211, 21, 198);
-    height: 1000px;
-    padding: 200px;
 }
 
 h2 {
