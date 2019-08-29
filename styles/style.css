@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html {
+    scroll-behavior: smooth;
+    background-color: black;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+html {
+		scroll-behavior: auto;
+	}
+}
+body {
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.sidenav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90px;
+    background-color: rgb(0, 85, 104);
+    position: fixed;
+    right: 0;
+    /* top: calc(50% - 144px); */
+    height: 100vh
+}
+
+.sidenav a {
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.sidenav a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: rgb(71, 99, 121);
+}
+
+/* li {
+    display: inline;
+    float: center;
+    padding: 20px;
+} */
+
+#about {
+    background-color: rgb(22, 133, 72);
+    height: 1000px;
+    padding: 200px;
+}
+#projects {
+    background-color: rgb(66, 66, 193);
+    height: 1000px;
+    padding: 200px;
+}
+#skills {
+    background-color: rgb(21, 211, 138);
+    height: 1000px;
+    padding: 200px;
+}
+
+#contact {
+    background-color: rgb(211, 21, 198);
+    height: 1000px;
+    padding: 200px;
+}
+
+h2 {
+    color: white;
+    font-size: 70px;
+}
