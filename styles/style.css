@@ -1,77 +1,141 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 html {
     scroll-behavior: smooth;
     background-color: black;
+    font-family: 'Poppins', sans-serif;
 }
+
 @media screen and (prefers-reduced-motion: reduce) {
 html {
 		scroll-behavior: auto;
 	}
 }
+
 body {
     margin: 0;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
+    scroll-snap-type: both mandatory;
 }
 
 .sidenav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     width: 90px;
-    background-color: rgb(0, 85, 104);
+    background-color: rgb(0, 0, 0);
     position: fixed;
     right: 0;
-    /* top: calc(50% - 144px); */
-    height: 100vh
+    height: 100vh;
+    border-radius: 73px 0 0 73px;
 }
+
+/* @media screen */
 
 .sidenav a {
     text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
+    padding: 24.5px 0;
+    transition: all 0.35s ease;
     color: white;
     font-size: 36px;
+    border-radius: 0 40px 40px 0;
 }
 
 .sidenav a:hover {
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
-.active {
-    background-color: rgb(71, 99, 121);
-}
-
-/* li {
-    display: inline;
-    float: center;
-    padding: 20px;
-} */
+/* for all pages */
 
 #about,
 #projects,
 #skills,
 #contact {
+    display: flex;
+    flex-wrap: wrap;
     height: 100vh;
-    padding: 200px;
-
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
 
 #about {
-    background-color: rgb(22, 133, 72);
+    background-color: rgb(28, 172, 88);
 }
 #projects {
-    background-color: rgb(66, 66, 193);
+    background-color: rgb(81, 156, 243);
 }
 #skills {
-    background-color: rgb(21, 211, 138);
+    background-color: rgb(40, 196, 170);
+}
+#contact {
+    background-color: rgb(177, 111, 216);
 }
 
-#contact {
-    background-color: rgb(211, 21, 198);
+.container {
+    flex-flow: wrap;
+    height: 70%;
+    width: 40%;
+    padding: 50px;
+    background-color: white;
+    border-radius: 0 60px 60px 60px;
+    box-shadow: 1rem 1rem black;
+    overflow: scroll;
+}
+
+.block {
+    padding: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
 }
 
 h2 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 70px;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+span {
+    color: rgb(28, 172, 88);
+}
+
+/* about page */
+
+.portrait {
+    max-height: 300px;
+    align-self: center;
+    border-radius: 0 30px 30px 30px;
+    box-shadow: .5rem .5rem black;
+}
+
+/* projects */
+
+.project1,
+.project2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.project1 > img,
+.project1 > p,
+.project2 > img,
+.project2 > p {
+    max-width: 350px;
+    align-self: center;
 }
