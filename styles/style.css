@@ -139,3 +139,31 @@ span {
     max-width: 350px;
     align-self: center;
 }
+
+/* skills */
+#skills > .container > .block > .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#skills > .container > .block > .content > element,
+#skills > .container > .block > .content > element > i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    max-width: 120px;
+}
+
+#skills > .container > .block > .content > element > i::before {
+    font-size: 4rem;
+    align-self: center;
+}
+
+#skills > .container > .block > .content > element > p {
+    font-size: 1.1rem;
+    align-self: center;
+    text-align: center;
+}
