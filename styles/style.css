@@ -60,16 +60,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    justify-content: center;
+    width: calc(100vw - 90px);
+    justify-content: space-around;
     align-items: center;
     scroll-snap-align: start;
 }
 
+/* area {
+    position: fixed;
+    height: 100%;
+} */
+
 #about {
-    background-color: rgb(28, 172, 88);
+    background-color: rgb(83, 130, 216);
 }
 #projects {
-    background-color: rgb(81, 156, 243);
+    background-color: rgb(255, 138, 42);
 }
 #skills {
     background-color: rgb(40, 196, 170);
@@ -80,11 +86,11 @@ body {
 
 .container {
     flex-flow: wrap;
-    height: 70%;
+    height: 50%;
     width: 40%;
     padding: 50px;
     background-color: white;
-    border-radius: 0 60px 60px 60px;
+    /* border-radius: 0 60px 60px 60px; */
     box-shadow: 1rem 1rem black;
     overflow: scroll;
 }
@@ -96,12 +102,13 @@ body {
 .content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 5px;
 }
 
 h2 {
-    color: rgb(0, 0, 0);
-    font-size: 70px;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
     text-align: center;
     margin: 0;
 }
@@ -111,15 +118,25 @@ h3 {
 }
 
 span {
-    color: rgb(28, 172, 88);
+    color: rgb(0, 0, 0);
 }
 
-/* about page */
+/* about */
+
+#about > .container {
+    max-width: 27%;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .portrait {
-    max-height: 300px;
+    max-height: 400px;
     align-self: center;
-    border-radius: 0 30px 30px 30px;
+    /* border-radius: 0 30px 30px 30px; */
     box-shadow: .5rem .5rem black;
 }
 
@@ -148,17 +165,22 @@ span {
     align-content: center;
 }
 
+#skills > .container > .block > .content > element {
+    flex-basis: 100%;
+}
+
 #skills > .container > .block > .content > element,
 #skills > .container > .block > .content > element > i {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 10px;
-    max-width: 120px;
+    max-width: 110px;
 }
 
+
+
 #skills > .container > .block > .content > element > i::before {
-    font-size: 4rem;
+    font-size: 3rem;
     align-self: center;
 }
 
@@ -166,4 +188,36 @@ span {
     font-size: 1.1rem;
     align-self: center;
     text-align: center;
+    flex-grow: 1;
+}
+
+/* contact */
+
+#contact > .container {
+    flex-direction: row;
+}
+
+#contact > .container > .block > .content > a > element,
+#contact > .container > .block > .content > a > element > i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    max-width: 120px;
+} 
+
+#contact > .container > .block > .content > a > element > i::before {
+    font-size: 4rem;
+    align-self: center;
+}
+
+#contact > .container > .block > .content > a > element > p {
+    font-size: 1rem;
+    align-self: center;
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
