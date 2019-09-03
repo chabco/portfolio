@@ -5,6 +5,7 @@
     background: transparent; /* make scrollbar transparent */
 }
 
+
 html {
     scroll-behavior: smooth;
     background-color: black;
@@ -61,7 +62,7 @@ body {
     flex-wrap: wrap;
     height: 100vh;
     width: calc(100vw - 90px);
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     scroll-snap-align: start;
 }
@@ -76,12 +77,14 @@ body {
 }
 #projects {
     background-color: rgb(255, 138, 42);
+    flex-direction: row-reverse;
 }
 #skills {
     background-color: rgb(40, 196, 170);
 }
 #contact {
     background-color: rgb(177, 111, 216);
+    flex-direction: row-reverse;
 }
 
 .container {
@@ -90,13 +93,13 @@ body {
     width: 40%;
     padding: 50px;
     background-color: white;
-    /* border-radius: 0 60px 60px 60px; */
+    border-radius: 0 60px 60px 60px;
     box-shadow: 1rem 1rem black;
-    overflow: scroll;
+    /* overflow: auto; */
 }
 
 .block {
-    padding: 5px;
+    padding: 10px;
 }
 
 .content {
@@ -111,6 +114,7 @@ h2 {
     font-size: 60px;
     text-align: center;
     margin: 0;
+    text-shadow: 5px 5px black;
 }
 
 h3 {
@@ -119,12 +123,14 @@ h3 {
 
 span {
     color: rgb(0, 0, 0);
+    text-shadow: none;
 }
 
 /* about */
 
 #about > .container {
     max-width: 27%;
+    height: 30%;
 }
 
 .me {
@@ -158,6 +164,11 @@ span {
 }
 
 /* skills */
+#skills > .container {
+    height: 60%;
+    width: 33%;
+}
+
 #skills > .container > .block > .content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -194,6 +205,10 @@ span {
 /* contact */
 
 #contact > .container {
+    height: 25%;
+}
+
+#contact > .container > .block > .content {
     flex-direction: row;
 }
 
