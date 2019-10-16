@@ -1,0 +1,222 @@
+/* Portrait */
+ 
+@media screen
+    and (min-width: 424px)
+    /* and (min-height: 667px) */
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+        .sidenav {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            width: calc(100vw + 1px);
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            bottom: 0;
+            height: 162px;
+            /* border-radius: 73px 0 0 73px; */
+        }
+        
+        .sidenav a {
+            text-align: center;
+            height: 160px;
+            width: 130px;
+            padding: 24.5px 24.5px;
+            transition: all 0.35s ease;
+            color: white; 
+            font-size: 80px;
+            border-radius: 0 0 0 0;
+        }
+
+        #all-pages {
+            height: calc(100vh - 160px);
+        }
+        
+        #about,
+        #projects,
+        #skills,
+        #contact {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            font-size: 35px;
+            height: calc(100vh - 160px);
+            width: 100vw;
+            justify-content: space-evenly;
+            align-items: center;
+            scroll-snap-align: start;
+            /* overflow: hidden; */
+        }
+
+        h2 {
+            color: rgb(255, 255, 255);
+            font-size: 120px;
+            text-align: center;
+            margin: 0;
+            text-shadow: 5px 5px black;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .page-title {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* about */
+
+        #about > .container {
+            width: 85%;
+            /* overflow: auto; */
+        }
+
+        .portrait {
+            max-height: 400px;
+            align-self: center;
+            /* border-radius: 0 30px 30px 30px; */
+            box-shadow: 1rem 1rem black;
+            height: 100%;
+            width: 65%;
+            border-radius: 900px;
+        }
+
+        /* projects */
+
+        #projects > .container {
+            /* height: 40%; */
+            width: 85%;
+        }
+        
+        .project1,
+        .project2 {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+        }
+        
+        .project1 > img,
+        .project1 > p,
+        .project2 > img,
+        .project2 > p {
+            max-width: 100%;
+            align-self: center;
+            border-radius: 0 50px 50px 50px;
+        }
+
+        /* skills */
+
+        #skills > .container {
+            /* height: 60%; */
+            width: 85%;
+            /* overflow: auto; */
+        }
+        
+        #skills > .container > .block > .content {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        
+        #skills > .container > .block > .content > element {
+            flex-basis: 100%;
+        }
+        
+        #skills > .container > .block > .content > element,
+        #skills > .container > .block > .content > element > i {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            max-width: 90px;
+        }
+        
+        
+        
+        #skills > .container > .block > .content > element > i::before {
+            font-size: 8rem;
+            align-self: center;
+        }
+        
+        #skills > .container > .block > .content > element > p {
+            font-size: 1.7rem;
+            align-self: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+
+        /* contact */
+
+        #contact {
+            height: 100vh;
+        }
+
+        #contact > .container {
+            /* height: 40%; */
+            width: 85%;
+        }
+
+        #contact > .container > .block > .content {
+            flex-direction: row;
+        }
+
+        #contact > .container > .block > .content > a > element,
+        #contact > .container > .block > .content > a > element > i {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px;
+            max-width: 120px;
+        } 
+
+        #contact > .container > .block > .content > a > element > i::before {
+            font-size: 8rem;
+            align-self: center;
+        }
+
+        #contact > .container > .block > .content > a > element > p {
+            font-size: 1.7rem;
+            align-self: center;
+            text-align: center;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+}
+ 
+/* Landscape */
+ 
+@media screen
+    and (min-width: 375px)
+    and (min-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+        .sidenav {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 100vw;
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            bottom: 0;
+            height: 90px;
+            /* border-radius: 73px 0 0 73px; */
+        }
+        
+        .sidenav a {
+            text-align: center;
+            padding: 24.5px 0;
+            transition: all 0.35s ease;
+            color: white;
+            font-size: 36px;
+            /* border-radius: 0 40px 40px 0; */
+        }
+}
