@@ -1,10 +1,8 @@
 /* Portrait */
  
 @media screen
-    and (min-width: 424px)
-    /* and (min-height: 667px) */
-    and (-webkit-device-pixel-ratio: 3)
-    and (orientation: portrait) {
+    and (min-width: 425px)
+    and (min-height: 900px) {
         .sidenav {
             display: flex;
             justify-content: space-around;
@@ -172,12 +170,17 @@
             flex-direction: row;
             justify-content: center;
             padding: 10px;
-            max-width: 120px;
+            max-width: 128px;
         } 
 
         #contact > .container > .block > .content > a > element > i::before {
             font-size: 8rem;
             align-self: center;
+        }
+
+        #contact > .container > .block > .content > a > element > i > img {
+            height: 128px;
+            width: 128px;
         }
 
         #contact > .container > .block > .content > a > element > p {
